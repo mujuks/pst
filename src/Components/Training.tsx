@@ -7,16 +7,15 @@ import { motion } from "framer-motion";
 export default function Training(){
 
 
-
-const modules = [
+const modules=[
 
 "Gospel Foundations",
-"Biblical Leadership",
+"Biblical Interpretation",
+"Leadership Training",
 "Public Speaking",
-"Counselling Skills",
-"Conflict Management",
-"Team Development",
-"Discipleship",
+"Counselling",
+"Conflict Resolution",
+"People Development",
 "Strategic Leadership"
 
 ];
@@ -27,69 +26,56 @@ const phases=[
 
 {
 title:"Assess",
-text:"Identify leadership gaps and understand areas for growth."
+text:"A consultation to identify leadership gaps and understand team goals."
 },
 
 {
 title:"Align",
-text:"Create customized training based on values and goals."
+text:"Customized workshops built around your values and biblical principles."
 },
 
 {
 title:"Activate",
-text:"Practical learning through discussions, activities and action plans."
+text:"Interactive training using discussions, role plays and practical action plans."
 },
 
 {
 title:"Advance",
-text:"Continuous coaching and leadership development."
+text:"Continuous coaching to help leaders implement and multiply the training."
 }
 
 ];
 
 
 
-const people=[
-
-"Pastors",
-"Elders",
-"Ministry Leaders",
-"CEOs",
-"Managers",
-"Entrepreneurs",
-"HR Leaders",
-"Team Leaders"
-
-];
 
 
-
-const fadeUp={
+const fade={
 
 hidden:{
 opacity:0,
-y:50
+y:40
 },
 
 show:{
 opacity:1,
 y:0,
 transition:{
-duration:0.7
+duration:.7
 }
+
 }
 
 };
 
 
 
+
+
 return(
 
 
-<div className="
-min-h-screen
-bg-gray-50
-">
+<div className="min-h-screen bg-gray-50">
 
 
 <Header/>
@@ -99,64 +85,79 @@ bg-gray-50
 
 
 
+
+
 {/* HERO */}
 
 
-<section
 
-className="
-relative
-pt-32
-bg-cover
-bg-center
+<section className="
+
+bg-linear-to-br
+
+from-blue-950
+
+via-blue-900
+
+to-blue-800
+
 text-white
-"
 
-style={{
+py-32
 
-backgroundImage:"url('/pst2.jpeg')"
-
-}}
-
->
-
-
-<div className="
-absolute
-inset-0
-bg-blue-950/85
 ">
-
-
-</div>
-
-
 
 
 <motion.div
 
-variants={fadeUp}
+variants={fade}
+
 initial="hidden"
-whileInView="show"
-viewport={{once:true}}
+
+animate="show"
 
 className="
-relative
-max-w-7xl
+
+max-w-6xl
+
 mx-auto
+
 px-6
-py-28
+
 text-center
+
 "
 
 
 >
 
 
-<h1 className="
-text-5xl
-md:text-7xl
+<p className="
+
+text-yellow-400
+
 font-bold
+
+tracking-[6px]
+
+">
+
+EMPOWER | EQUIP | TRANSFORM
+
+</p>
+
+
+
+<h1 className="
+
+mt-6
+
+text-5xl
+
+md:text-7xl
+
+font-black
+
 ">
 
 Leadership Training
@@ -166,25 +167,24 @@ Leadership Training
 
 
 <p className="
+
 mt-6
-max-w-3xl
-mx-auto
+
 text-xl
+
+max-w-3xl
+
+mx-auto
+
 text-gray-200
+
 ">
 
-Equipping leaders in the church and marketplace
-with biblical wisdom, practical skills and
-transformational leadership tools.
+Equipping church and marketplace leaders with
+biblical wisdom, practical skills and transformational
+leadership tools.
 
 </p>
-
-
-
-
-<div className="
-mt-10
-">
 
 
 <Link
@@ -192,13 +192,23 @@ mt-10
 to="/joincohort"
 
 className="
-bg-yellow-600
+
+inline-block
+
+mt-10
+
+bg-yellow-500
+
+text-blue-950
+
 px-10
+
 py-4
+
 rounded-full
-font-semibold
-hover:bg-yellow-700
-transition
+
+font-bold
+
 "
 
 >
@@ -208,10 +218,6 @@ Join Training
 </Link>
 
 
-</div>
-
-
-
 </motion.div>
 
 
@@ -225,39 +231,58 @@ Join Training
 
 
 
-{/* INTRO */}
+{/* WHAT WE DO */}
 
 
 
 <section className="
-py-20
+
 max-w-7xl
+
 mx-auto
+
 px-6
+
+py-24
+
+">
+
+
+<div className="
+
+grid
+
+md:grid-cols-2
+
+gap-14
+
+items-center
+
 ">
 
 
 
 <motion.div
 
-variants={fadeUp}
-initial="hidden"
-whileInView="show"
-viewport={{once:true}}
+variants={fade}
 
-className="
-text-center
-max-w-4xl
-mx-auto
-"
+initial="hidden"
+
+whileInView="show"
+
+viewport={{once:true}}
 
 >
 
 
 <h2 className="
+
 text-4xl
+
 font-bold
+
 text-blue-950
+
 ">
 
 What We Do
@@ -265,19 +290,39 @@ What We Do
 </h2>
 
 
-
 <p className="
+
 mt-6
+
 text-gray-600
-text-lg
+
 leading-relaxed
+
 ">
+
 
 Our aim is to equip pastors, ministry leaders,
 corporate leaders and entrepreneurs with tools
 to build healthy organizations and gospel-centered
 communities.
 
+
+</p>
+
+
+<p className="
+
+mt-5
+
+text-gray-600
+
+">
+
+
+Whether in the pulpit or boardroom, we provide
+biblically grounded practical tools so leaders can
+equip others and create lasting transformation.
+
 </p>
 
 
@@ -285,128 +330,39 @@ communities.
 
 
 
-</section>
 
 
 
 
+<motion.div
 
+initial={{opacity:0,scale:.8}}
 
+whileInView={{opacity:1,scale:1}}
 
+viewport={{once:true}}
 
+className="relative"
 
-
-{/* EQUIPPING */}
-
-
-
-<section className="
-bg-white
-py-20
-">
-
+>
 
 
 <div className="
-max-w-7xl
-mx-auto
-px-6
-grid
-md:grid-cols-2
-gap-12
-items-center
-">
 
+absolute
 
+inset-0
 
-<motion.div
+bg-yellow-500
 
-initial={{
-opacity:0,
-x:-50
-}}
-
-whileInView={{
-opacity:1,
-x:0
-}}
-
-viewport={{once:true}}
-
->
-
-
-<h2 className="
-text-4xl
-font-bold
-text-blue-950
-">
-
-Equipping Leaders
-
-</h2>
-
-
-
-<p className="
-mt-6
-text-gray-600
-leading-relaxed
-">
-
-Our leadership training is built on biblical foundations,
-practical experience and a passion to develop leaders
-who influence churches, organizations and communities.
-
-</p>
-
-
-
-<p className="
-mt-4
-text-gray-600
-">
-
-Leaders are not only called to lead,
-but also to multiply and equip others.
-
-</p>
-
-
-</motion.div>
-
-
-
-
-
-
-
-<motion.div
-
-initial={{
-opacity:0,
-scale:0.8
-}}
-
-whileInView={{
-opacity:1,
-scale:1
-}}
-
-transition={{
-duration:0.8
-}}
-
-viewport={{once:true}}
-
-className="
 rounded-3xl
-overflow-hidden
-shadow-2xl
-"
 
+rotate-6
 
->
+">
+
+</div>
+
 
 
 <img
@@ -416,12 +372,23 @@ src="/pst2.jpeg"
 alt="Training"
 
 className="
+
+relative
+
+rounded-3xl
+
+shadow-xl
+
+h-112.5
+
 w-full
-h-125
+
 object-cover
+
 "
 
 />
+
 
 
 </motion.div>
@@ -429,7 +396,6 @@ object-cover
 
 
 </div>
-
 
 
 </section>
@@ -442,30 +408,40 @@ object-cover
 
 
 
-{/* TRACKS */}
+{/* TRAINING TRACKS */}
 
 
 
 <section className="
-py-20
-bg-gray-100
-">
 
+bg-white
+
+py-20
+
+">
 
 
 <div className="
+
 max-w-7xl
+
 mx-auto
+
 px-6
+
 ">
 
 
-
 <h2 className="
+
 text-4xl
+
 font-bold
+
 text-center
+
 text-blue-950
+
 ">
 
 Training Tracks
@@ -477,56 +453,42 @@ Training Tracks
 
 
 <div className="
+
 grid
+
 md:grid-cols-2
+
 gap-10
+
 mt-12
+
 ">
 
 
 
 
 
-<motion.div
+<div className="
 
-whileInView={{
-opacity:1,
-y:0
-}}
-
-initial={{
-opacity:0,
-y:50
-}}
-
-viewport={{once:true}}
-
-className="
 bg-blue-950
+
 text-white
+
 rounded-3xl
+
 p-10
-shadow-xl
-"
 
-
->
-
-
-<h3 className="
-text-3xl
-font-bold
 ">
+
+
+<h3 className="text-3xl font-bold">
 
 Church Leadership Institute
 
 </h3>
 
 
-<p className="
-mt-5
-text-gray-300
-">
+<p className="mt-5 text-gray-300">
 
 Training pastors and ministry leaders to shepherd,
 disciple and multiply God's people.
@@ -535,29 +497,26 @@ disciple and multiply God's people.
 
 
 
-<ul className="
-mt-6
-space-y-3
-">
+<ul className="mt-6 space-y-3">
 
 
-<li>✓ Biblical Foundations</li>
+<li>✓ Doctrine & Biblical Foundations</li>
 
-<li>✓ Scripture Interpretation</li>
+<li>✓ Hermeneutics & Teaching Scripture</li>
 
-<li>✓ Pastoral Care</li>
+<li>✓ Counselling & Pastoral Care</li>
 
 <li>✓ Conflict Resolution</li>
 
 <li>✓ Disciple Making</li>
 
+<li>✓ Church Leadership</li>
+
 
 </ul>
 
 
-
-</motion.div>
-
+</div>
 
 
 
@@ -566,36 +525,20 @@ space-y-3
 
 
 
-<motion.div
+<div className="
 
-whileInView={{
-opacity:1,
-y:0
-}}
+bg-yellow-500
 
-initial={{
-opacity:0,
-y:50
-}}
-
-viewport={{once:true}}
-
-className="
-bg-yellow-600
-text-white
 rounded-3xl
+
 p-10
-shadow-xl
-"
 
+text-blue-950
 
->
-
-
-<h3 className="
-text-3xl
-font-bold
 ">
+
+
+<h3 className="text-3xl font-bold">
 
 Marketplace Leadership Academy
 
@@ -603,44 +546,114 @@ Marketplace Leadership Academy
 
 
 
-<p className="
-mt-5
-">
+<p className="mt-5">
 
-Helping business leaders lead with integrity,
-wisdom and servant leadership.
+Helping leaders manage people and organizations
+with biblical wisdom and excellence.
 
 </p>
 
 
 
-<ul className="
-mt-6
-space-y-3
-">
+<ul className="mt-6 space-y-3">
 
 
-<li>✓ Character Leadership</li>
+<li>✓ Character-Based Leadership</li>
 
 <li>✓ People Management</li>
 
+<li>✓ Coaching & Feedback</li>
+
 <li>✓ Team Building</li>
 
-<li>✓ Ethical Decisions</li>
-
-<li>✓ Workplace Transformation</li>
+<li>✓ Ethical Decision Making</li>
 
 
 </ul>
 
 
 
-</motion.div>
+</div>
 
 
 
 </div>
 
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+{/* BRIDGE */}
+
+
+
+<section className="
+
+py-20
+
+bg-gray-100
+
+">
+
+
+<div className="
+
+max-w-5xl
+
+mx-auto
+
+px-6
+
+text-center
+
+">
+
+
+<h2 className="
+
+text-4xl
+
+font-bold
+
+text-blue-950
+
+">
+
+The Bridge
+
+</h2>
+
+
+<p className="
+
+mt-6
+
+text-gray-600
+
+leading-relaxed
+
+">
+
+
+Ephesians 4 is the foundation for both tracks.
+
+A pastor and a CEO both need to know how to shepherd
+people, handle truth and stay faithful under pressure.
+
+The work of ministry happens in the pulpit and the
+boardroom.
+
+</p>
 
 
 </div>
@@ -661,18 +674,28 @@ space-y-3
 
 
 <section className="
+
 py-20
+
 max-w-7xl
+
 mx-auto
+
 px-6
+
 ">
 
 
 <h2 className="
+
 text-4xl
+
 font-bold
+
 text-center
+
 text-blue-950
+
 ">
 
 Training Modules
@@ -681,65 +704,53 @@ Training Modules
 
 
 
-
 <div className="
+
 grid
+
 md:grid-cols-4
+
 gap-6
+
 mt-12
+
 ">
 
 
 {
 
-modules.map((item,index)=>(
+modules.map(item=>(
 
 
-<motion.div
+<div
 
 key={item}
 
-initial={{
-opacity:0,
-y:40
-}}
-
-whileInView={{
-opacity:1,
-y:0
-}}
-
-transition={{
-delay:index*0.1
-}}
-
-viewport={{once:true}}
-
 className="
+
 bg-white
-rounded-2xl
+
 shadow
+
+rounded-2xl
+
 p-6
+
 text-center
-hover:-translate-y-2
-transition
+
+font-bold
+
+text-blue-900
+
 "
+
 
 >
 
-
-<h3 className="
-font-bold
-text-blue-900
-">
-
 {item}
 
-</h3>
 
-
-
-</motion.div>
+</div>
 
 
 ))
@@ -762,74 +773,78 @@ text-blue-900
 
 
 
-{/* FOUR PHASE MODEL */}
+{/* CORPORATE MODEL */}
 
 
 
 <section className="
+
 bg-blue-950
+
 text-white
+
 py-20
+
 ">
 
 
-
 <div className="
+
 max-w-7xl
+
 mx-auto
+
 px-6
+
 ">
 
 
 <h2 className="
+
 text-4xl
+
 font-bold
+
 text-center
+
 ">
 
-Our 4 Phase Training Model
+Corporate Training Model
 
 </h2>
 
 
 
 <div className="
+
 grid
+
 md:grid-cols-4
+
 gap-8
+
 mt-12
+
 ">
 
 
 {
 
-phases.map((phase,index)=>(
+phases.map(item=>(
 
 
-<motion.div
+<div
 
-key={phase.title}
-
-whileInView={{
-opacity:1,
-y:0
-}}
-
-initial={{
-opacity:0,
-y:40
-}}
-
-transition={{
-delay:index*0.1
-}}
-
-viewport={{once:true}}
+key={item.title}
 
 className="
+
 bg-white/10
+
 rounded-2xl
+
 p-8
+
 "
 
 
@@ -837,29 +852,28 @@ p-8
 
 
 <h3 className="
+
 text-2xl
+
 font-bold
-text-yellow-500
+
+text-yellow-400
+
 ">
 
-{phase.title}
+{item.title}
 
 </h3>
 
 
+<p className="mt-4 text-gray-300">
 
-<p className="
-mt-4
-text-gray-300
-">
-
-{phase.text}
+{item.text}
 
 </p>
 
 
-</motion.div>
-
+</div>
 
 
 ))
@@ -870,86 +884,6 @@ text-gray-300
 
 
 </div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-{/* WHO WE TRAIN */}
-
-
-
-<section className="
-py-20
-max-w-7xl
-mx-auto
-px-6
-">
-
-
-<h2 className="
-text-4xl
-font-bold
-text-center
-text-blue-950
-">
-
-Who We Train
-
-</h2>
-
-
-
-<div className="
-flex
-flex-wrap
-justify-center
-gap-5
-mt-10
-">
-
-
-{
-
-people.map(person=>(
-
-
-<span
-
-key={person}
-
-className="
-bg-blue-950
-text-white
-px-6
-py-3
-rounded-full
-hover:bg-yellow-600
-transition
-"
-
->
-
-{person}
-
-</span>
-
-
-))
-
-
-}
-
 
 
 </div>
@@ -970,32 +904,37 @@ transition
 
 
 <section className="
-bg-blue-950
-text-white
+
 py-20
+
 text-center
+
+bg-white
+
 ">
 
 
 <h2 className="
+
 text-4xl
+
 font-bold
+
+text-blue-950
+
 ">
 
-Equip. Empower. Transform.
+Ready To Multiply Leaders?
 
 </h2>
 
 
-<p className="
-mt-5
-text-gray-300
-">
 
-Start your leadership journey today.
+<p className="mt-5 text-gray-600">
+
+Join our next leadership training cohort.
 
 </p>
-
 
 
 
@@ -1004,23 +943,30 @@ Start your leadership journey today.
 to="/joincohort"
 
 className="
+
 inline-block
+
 mt-8
-bg-yellow-600
+
+bg-yellow-500
+
 px-10
+
 py-4
+
 rounded-full
+
 font-bold
-hover:bg-yellow-700
-transition
+
+text-blue-950
+
 "
 
 >
 
-Join Training
+Start Training
 
 </Link>
-
 
 
 </section>

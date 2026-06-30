@@ -11,7 +11,7 @@ export default function Contact(){
 const contactInfo=[
 
 {
-title:"Phone / WhatsApp",
+title:"WhatsApp / Call",
 icon:"📞",
 text:"+254 7045148380"
 },
@@ -36,15 +36,37 @@ text:"Kenya | East Africa"
 
 const services=[
 
-"Church Leadership Training",
+"Church Leadership Institute",
 
 "Marketplace Leadership Academy",
 
-"Corporate Training",
+"Corporate Leadership Training",
 
-"Leadership Coaching"
+"Leadership Coaching",
+
+"Open Leadership Cohort"
 
 ];
+
+
+
+
+
+const audiences=[
+
+"Pastors & Ministry Leaders",
+
+"CEOs & Business Leaders",
+
+"Managers & Team Leaders",
+
+"Entrepreneurs",
+
+"Church Planters"
+
+];
+
+
 
 
 
@@ -58,7 +80,7 @@ bg-gray-50
 ">
 
 
-<Header />
+<Header/>
 
 
 
@@ -68,28 +90,53 @@ bg-gray-50
 {/* HERO */}
 
 
+
 <section className="
 relative
 pt-32
-bg-linear-to-br
-from-blue-950
-via-blue-900
-to-gray-900
+bg-blue-950
 text-white
 overflow-hidden
 ">
 
 
+<div className="
+absolute
+right-0
+top-0
+w-96
+h-96
+bg-yellow-500/20
+rounded-full
+blur-3xl
+">
+
+</div>
+
+
+
+
 
 <motion.div
 
-initial={{opacity:0,y:40}}
 
-animate={{opacity:1,y:0}}
+initial={{
+opacity:0,
+y:40
+}}
 
-transition={{duration:0.8}}
+animate={{
+opacity:1,
+y:0
+}}
+
+transition={{
+duration:.8
+}}
+
 
 className="
+relative
 max-w-7xl
 mx-auto
 px-6
@@ -98,10 +145,24 @@ text-center
 ">
 
 
-<h1 className="
-text-5xl
-md:text-6xl
+<p className="
+text-yellow-400
+tracking-[6px]
 font-bold
+">
+
+EPHESIANS 4:11-13
+
+</p>
+
+
+
+
+<h1 className="
+mt-6
+text-5xl
+md:text-7xl
+font-black
 ">
 
 Let's Connect
@@ -112,20 +173,20 @@ Let's Connect
 
 <p className="
 mt-6
+text-xl
 max-w-3xl
 mx-auto
-text-xl
 text-gray-300
 ">
 
 
-Ready to empower leaders, equip churches
-and transform communities?
+Ready to empower leaders, equip churches,
+and transform communities through biblical
+leadership development?
 
-
-We would love to walk with you.
 
 </p>
+
 
 
 </motion.div>
@@ -141,7 +202,7 @@ We would love to walk with you.
 
 
 
-{/* CONTACT AREA */}
+{/* CONTACT INFORMATION */}
 
 
 
@@ -153,110 +214,62 @@ py-20
 ">
 
 
-
 <div className="
 grid
-md:grid-cols-2
-gap-14
-items-start
+md:grid-cols-3
+gap-8
 ">
 
-
-
-
-
-
-
-{/* INFORMATION */}
-
-
-
-<motion.div
-
-
-initial={{opacity:0,x:-50}}
-
-whileInView={{opacity:1,x:0}}
-
-transition={{duration:0.7}}
-
-viewport={{once:true}}
-
->
-
-
-<h2 className="
-text-4xl
-font-bold
-text-blue-950
-">
-
-
-Contact Information
-
-
-</h2>
-
-
-
-
-<p className="
-mt-5
-text-gray-600
-leading-relaxed
-">
-
-
-Whether you are a pastor,
-organization leader or marketplace professional,
-we are ready to help you grow and multiply leaders.
-
-
-</p>
-
-
-
-
-
-
-<div className="
-mt-10
-space-y-6
-">
 
 
 {
-
 contactInfo.map(item=>(
-
 
 
 <motion.div
 
+
 whileHover={{
-scale:1.03
+y:-8
 }}
 
 key={item.title}
 
 className="
 bg-white
-rounded-2xl
+rounded-3xl
 shadow-lg
-p-6
+p-8
 border
+"
+
+
+>
+
+
+<div className="
+text-4xl
 ">
+
+{item.icon}
+
+</div>
+
 
 
 <h3 className="
+mt-5
 text-xl
 font-bold
-text-blue-900
+text-blue-950
 ">
 
-{item.icon} {item.title}
+
+{item.title}
+
 
 </h3>
+
 
 
 
@@ -265,13 +278,15 @@ mt-3
 text-gray-600
 ">
 
+
 {item.text}
+
 
 </p>
 
 
-</motion.div>
 
+</motion.div>
 
 
 ))
@@ -284,10 +299,7 @@ text-gray-600
 </div>
 
 
-
-
-</motion.div>
-
+</section>
 
 
 
@@ -297,58 +309,182 @@ text-gray-600
 
 
 
+{/* WHO WE SERVE */}
 
 
 
-
-{/* FORM */}
-
-
-
-<motion.div
-
-
-initial={{opacity:0,x:50}}
-
-whileInView={{opacity:1,x:0}}
-
-transition={{duration:0.7}}
-
-viewport={{once:true}}
-
-
-className="
+<section className="
 bg-white
-rounded-3xl
-shadow-xl
-p-8
-border
+py-20
+">
+
+
+<div className="
+max-w-7xl
+mx-auto
+px-6
 ">
 
 
 <h2 className="
-text-3xl
+text-4xl
 font-bold
+text-center
 text-blue-950
-mb-8
 ">
 
-Send Us A Message
+Who We Serve
 
 </h2>
 
 
 
 
+<p className="
+mt-5
+text-center
+text-gray-600
+max-w-3xl
+mx-auto
+">
+
+
+The work of ministry happens both in the church
+and marketplace. We equip leaders who influence
+churches, organizations, companies and communities.
+
+
+</p>
+
+
+
+
+
+<div className="
+flex
+flex-wrap
+justify-center
+gap-5
+mt-10
+">
+
+
+{
+audiences.map(person=>(
+
+
+<span
+
+key={person}
+
+className="
+bg-blue-950
+text-white
+px-6
+py-3
+rounded-full
+"
+
+
+>
+
+
+{person}
+
+
+</span>
+
+
+))
+
+
+}
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+{/* FORM SECTION */}
+
+
+
+
+<section className="
+py-20
+bg-gray-100
+">
+
+
+<div className="
+max-w-5xl
+mx-auto
+px-6
+">
+
+
+<div className="
+bg-white
+rounded-3xl
+shadow-xl
+p-10
+">
+
+
+
+<h2 className="
+text-3xl
+font-bold
+text-blue-950
+text-center
+">
+
+Start A Conversation
+
+</h2>
+
+
+
+<p className="
+text-center
+mt-4
+text-gray-600
+">
+
+
+Tell us how we can help you grow,
+equip your team or develop leaders.
+
+
+</p>
+
+
+
+
+
+
+
 <form className="
-space-5
+mt-10
+space-y-5
 ">
 
 
 
 <input
-
-type="text"
 
 placeholder="Full Name"
 
@@ -360,7 +496,7 @@ px-5
 py-4
 outline-none
 focus:ring-2
-focus:ring-blue-900
+focus:ring-blue-950
 "
 
 />
@@ -383,7 +519,7 @@ px-5
 py-4
 outline-none
 focus:ring-2
-focus:ring-blue-900
+focus:ring-blue-950
 "
 
 />
@@ -393,10 +529,7 @@ focus:ring-blue-900
 
 
 
-
 <input
-
-type="text"
 
 placeholder="Phone Number"
 
@@ -408,12 +541,10 @@ px-5
 py-4
 outline-none
 focus:ring-2
-focus:ring-blue-900
+focus:ring-blue-950
 "
 
 />
-
-
 
 
 
@@ -436,7 +567,7 @@ py-4
 
 <option>
 
-Select Service
+Choose Service
 
 </option>
 
@@ -455,10 +586,12 @@ services.map(service=>(
 
 ))
 
+
 }
 
 
 </select>
+
 
 
 
@@ -480,11 +613,10 @@ px-5
 py-4
 outline-none
 focus:ring-2
-focus:ring-blue-900
+focus:ring-blue-950
 "
 
 />
-
 
 
 
@@ -495,12 +627,12 @@ focus:ring-blue-900
 
 className="
 w-full
-bg-yellow-600
-text-white
+bg-yellow-500
+text-blue-950
 py-4
 rounded-xl
 font-bold
-hover:bg-yellow-700
+hover:bg-yellow-600
 transition
 "
 
@@ -516,19 +648,16 @@ Send Message
 
 
 
+
 </form>
-
-
-
-
-</motion.div>
-
-
 
 
 
 </div>
 
+
+
+</div>
 
 
 </section>
@@ -541,7 +670,119 @@ Send Message
 
 
 
-{/* WHATSAPP BUTTON */}
+{/* CORPORATE PARTNERSHIP */}
+
+
+
+<section className="
+bg-blue-950
+text-white
+py-20
+">
+
+
+<div className="
+max-w-6xl
+mx-auto
+px-6
+text-center
+">
+
+
+<h2 className="
+text-4xl
+font-bold
+">
+
+Partner With Us
+
+</h2>
+
+
+
+<p className="
+mt-6
+text-gray-300
+leading-relaxed
+">
+
+
+For churches, we provide leadership development,
+biblical training and disciple-making tools.
+
+For companies, we provide leadership coaching,
+team development and workplace transformation.
+
+
+</p>
+
+
+
+<div className="
+grid
+md:grid-cols-3
+gap-6
+mt-10
+">
+
+
+
+<div className="
+bg-white/10
+p-6
+rounded-2xl
+">
+
+Church Leadership
+
+</div>
+
+
+
+<div className="
+bg-white/10
+p-6
+rounded-2xl
+">
+
+Corporate Training
+
+</div>
+
+
+
+
+<div className="
+bg-white/10
+p-6
+rounded-2xl
+">
+
+Leadership Cohorts
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+{/* WHATSAPP */}
+
 
 
 <motion.a
@@ -552,17 +793,19 @@ href="https://wa.me/2547045148380"
 target="_blank"
 
 
-initial={{scale:0}}
+animate={{
 
-animate={{scale:1}}
+y:[0,-8,0]
 
-transition={{
-duration:0.5
 }}
 
 
-whileHover={{
-scale:1.15
+transition={{
+
+repeat:Infinity,
+
+duration:2
+
 }}
 
 
@@ -600,35 +843,26 @@ z-50
 
 
 
-{/* CTA */}
+{/* FINAL CTA */}
 
 
 
-<motion.section
 
-
-initial={{opacity:0}}
-
-whileInView={{opacity:1}}
-
-viewport={{once:true}}
-
-
-className="
-bg-blue-950
-text-white
+<section className="
 py-20
 text-center
+bg-white
 ">
 
 
 <h2 className="
 text-4xl
 font-bold
+text-blue-950
 ">
 
 
-Empower Leaders. Equip People. Transform Lives.
+Ready To Multiply Leaders?
 
 
 </h2>
@@ -637,19 +871,19 @@ Empower Leaders. Equip People. Transform Lives.
 
 <p className="
 mt-5
-text-gray-300
+text-gray-600
 ">
 
+EMPOWER | EQUIP | TRANSFORM
 
-Ephesians 4:11-13
+<br/>
 
+Preparing God's People For God's Work
 
 </p>
 
 
-
-</motion.section>
-
+</section>
 
 
 
@@ -662,8 +896,6 @@ Ephesians 4:11-13
 </div>
 
 
-
 )
-
 
 }

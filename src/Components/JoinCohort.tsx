@@ -1,30 +1,85 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import { motion } from "framer-motion";
-
+import { Link } from "react-router-dom";
 
 
 export default function JoinCohort(){
-
 
 
 const benefits=[
 
 {
 title:"Biblical Foundation",
-text:"Grow deeper in Scripture, gospel-centered leadership and ministry understanding."
+text:"Develop a strong understanding of Scripture, the gospel and biblical leadership rooted in Ephesians 4."
+},
+
+{
+title:"Practical Leadership Tools",
+text:"Gain skills in leadership, communication, counselling, people development and ministry effectiveness."
+},
+
+{
+title:"Multiply Leaders",
+text:"Become equipped to develop others and build healthy churches, organizations and communities."
+},
+
+{
+title:"Church & Marketplace Impact",
+text:"Apply biblical leadership principles whether serving in ministry, business or the workplace."
+}
+
+];
+
+
+
+
+const tracks=[
+
+{
+title:"Church Leadership Institute",
+
+text:
+"Train pastors and ministry leaders to shepherd well, disciple believers and multiply leaders.",
+
+points:[
+
+"Biblical foundations & doctrine",
+
+"Scripture interpretation",
+
+"Pastoral care & counselling",
+
+"Conflict resolution",
+
+"Disciple-making strategies"
+
+]
+
 },
 
 
-{
-title:"Practical Leadership",
-text:"Develop leadership skills for churches, organizations and communities."
-},
-
 
 {
-title:"Leadership Multiplication",
-text:"Become a leader who equips and develops other leaders."
+title:"Marketplace Leadership Academy",
+
+text:
+"Equip CEOs, managers and entrepreneurs to lead with biblical wisdom and excellence.",
+
+points:[
+
+"Character-based leadership",
+
+"People management",
+
+"Team development",
+
+"Ethical decision making",
+
+"Purpose-driven performance"
+
+]
+
 }
 
 
@@ -35,27 +90,55 @@ text:"Become a leader who equips and develops other leaders."
 
 
 
-const steps=[
+const phases=[
 
 {
-number:"01",
-title:"Apply",
-text:"Submit your application and select your leadership track."
+title:"Assess",
+text:"Identify leadership gaps and understand your growth areas."
 },
 
 {
-number:"02",
-title:"Training",
-text:"Participate in practical leadership sessions and coaching."
+title:"Align",
+text:"Create a training journey based on your values and leadership goals."
 },
 
 {
-number:"03",
-title:"Transform",
-text:"Apply what you learn and multiply leaders around you."
+title:"Activate",
+text:"Experience practical sessions, discussions, role plays and action plans."
+},
+
+{
+title:"Advance",
+text:"Receive follow-up coaching to apply and multiply what you learn."
 }
 
 ];
+
+
+
+
+
+
+const people=[
+
+"Pastors",
+
+"Elders",
+
+"Ministry Leaders",
+
+"Church Planters",
+
+"CEOs",
+
+"Managers",
+
+"Entrepreneurs",
+
+"HR Leaders"
+
+];
+
 
 
 
@@ -65,15 +148,10 @@ text:"Apply what you learn and multiply leaders around you."
 return(
 
 
-<div className="
-min-h-screen
-bg-gray-50
-">
+<div className="min-h-screen bg-gray-50">
 
 
 <Header/>
-
-
 
 
 
@@ -83,80 +161,116 @@ bg-gray-50
 
 
 <section className="
-pt-32
 bg-linear-to-br
 from-blue-950
 via-blue-900
 to-gray-900
 text-white
+py-32
 ">
 
 
-
 <motion.div
-
 
 initial={{
 opacity:0,
 y:40
 }}
 
-
 animate={{
 opacity:1,
 y:0
 }}
 
-
 transition={{
-duration:0.8
+duration:.8
 }}
 
-
-
 className="
-max-w-7xl
+max-w-6xl
 mx-auto
 px-6
-py-24
 text-center
+"
+
+
+>
+
+
+<p className="
+text-yellow-400
+font-bold
+tracking-widest
 ">
+
+EPHESIANS 4:11-13
+
+</p>
+
 
 
 <h1 className="
+mt-6
 text-5xl
-md:text-6xl
-font-bold
+md:text-7xl
+font-black
 ">
 
+JOIN THE
 
-Join Our Leadership Cohort
+<br/>
+
+<span className="text-yellow-400">
+
+LEADERSHIP COHORT
+
+</span>
 
 
 </h1>
 
 
 
-
 <p className="
-mt-6
+mt-8
 text-xl
 text-gray-300
 max-w-3xl
 mx-auto
 ">
 
-
-Be equipped, empowered and transformed
-to become a leader who equips others.
-
+Be empowered, equipped and transformed to become
+a leader who equips others for God's work.
 
 </p>
 
 
+<Link
+
+to="/contact"
+
+className="
+inline-block
+mt-10
+bg-yellow-500
+text-blue-950
+px-10
+py-4
+rounded-xl
+font-bold
+hover:scale-105
+transition
+"
+
+>
+
+Apply Now
+
+</Link>
+
+
 
 </motion.div>
-
 
 
 </section>
@@ -168,60 +282,89 @@ to become a leader who equips others.
 
 
 
-
-{/* BENEFITS */}
+{/* INTRO */}
 
 
 
 <section className="
-max-w-7xl
+max-w-5xl
 mx-auto
 px-6
+py-20
+text-center
+">
+
+
+<h2 className="
+text-4xl
+font-bold
+text-blue-950
+">
+
+Preparing God's People For God's Work
+
+</h2>
+
+
+
+<p className="
+mt-6
+text-gray-600
+leading-relaxed
+">
+
+
+Our leadership cohort exists to equip pastors,
+ministry leaders and marketplace leaders with
+biblical knowledge and practical tools that help
+them become effective, efficient and transformational.
+
+
+</p>
+
+
+</section>
+
+
+
+
+
+
+
+
+{/* WHY JOIN */}
+
+
+
+<section className="
+bg-white
 py-20
 ">
 
 
-
-<motion.h2
-
-
-initial={{
-opacity:0,
-y:30
-}}
+<div className="
+max-w-7xl
+mx-auto
+px-6
+">
 
 
-whileInView={{
-opacity:1,
-y:0
-}}
-
-
-viewport={{
-once:true
-}}
-
-
-className="
+<h2 className="
 text-4xl
 font-bold
 text-center
 text-blue-950
 ">
 
-
 Why Join The Cohort?
 
-
-</motion.h2>
-
-
+</h2>
 
 
 
 <div className="
 grid
-md:grid-cols-3
+md:grid-cols-4
 gap-8
 mt-12
 ">
@@ -232,43 +375,21 @@ mt-12
 benefits.map(item=>(
 
 
-
 <motion.div
-
-
-key={item.title}
-
 
 whileHover={{
 y:-10
 }}
 
-
-initial={{
-opacity:0,
-scale:0.9
-}}
-
-
-whileInView={{
-opacity:1,
-scale:1
-}}
-
-
-viewport={{
-once:true
-}}
-
-
-
 className="
-bg-white
+bg-gray-50
 rounded-3xl
-shadow-lg
 p-8
-border
-">
+shadow
+"
+
+
+>
 
 
 <h3 className="
@@ -277,24 +398,17 @@ font-bold
 text-blue-900
 ">
 
-
 {item.title}
 
-
 </h3>
-
-
 
 
 <p className="
 mt-4
 text-gray-600
-leading-relaxed
 ">
 
-
 {item.text}
-
 
 </p>
 
@@ -308,8 +422,11 @@ leading-relaxed
 }
 
 
+
 </div>
 
+
+</div>
 
 
 </section>
@@ -323,302 +440,116 @@ leading-relaxed
 
 
 
-
-
-{/* FORM */}
-
+{/* TRACKS */}
 
 
 
 <section className="
-bg-white
 py-20
-">
-
-
-
-<motion.div
-
-
-initial={{
-opacity:0,
-y:50
-}}
-
-
-whileInView={{
-opacity:1,
-y:0
-}}
-
-
-viewport={{
-once:true
-}}
-
-
-
-className="
-max-w-4xl
+max-w-7xl
 mx-auto
 px-6
 ">
 
 
-<div className="
-bg-gray-50
-rounded-3xl
-shadow-xl
-p-10
-">
-
-
 <h2 className="
-text-3xl
+text-4xl
 font-bold
-text-blue-950
 text-center
-mb-8
+text-blue-950
 ">
 
-
-Register For The Next Cohort
-
+Choose Your Leadership Track
 
 </h2>
 
 
 
-
-<form className="
-space-y-5
+<div className="
+grid
+md:grid-cols-2
+gap-10
+mt-12
 ">
 
 
+{
 
-<input
-
-placeholder="Full Name"
-
-className="
-w-full
-border
-rounded-xl
-px-5
-py-4
-focus:ring-2
-focus:ring-blue-900
-outline-none
-"
-
-/>
+tracks.map(track=>(
 
 
-
-
-<input
-
-type="email"
-
-placeholder="Email Address"
+<div
 
 className="
-w-full
-border
-rounded-xl
-px-5
-py-4
-focus:ring-2
-focus:ring-blue-900
-outline-none
-"
-
-/>
-
-
-
-
-
-<input
-
-placeholder="Phone Number"
-
-className="
-w-full
-border
-rounded-xl
-px-5
-py-4
-focus:ring-2
-focus:ring-blue-900
-outline-none
-"
-
-/>
-
-
-
-
-
-
-
-<select
-
-className="
-w-full
-border
-rounded-xl
-px-5
-py-4
-">
-
-
-<option>
-
-Choose Training Track
-
-</option>
-
-
-<option>
-
-Church Leadership Institute
-
-</option>
-
-
-<option>
-
-Marketplace Leadership Academy
-
-</option>
-
-
-</select>
-
-
-
-
-
-
-
-<select
-
-className="
-w-full
-border
-rounded-xl
-px-5
-py-4
-">
-
-
-<option>
-
-Select Your Role
-
-</option>
-
-
-<option>
-
-Pastor / Ministry Leader
-
-</option>
-
-
-<option>
-
-Business Owner
-
-</option>
-
-
-<option>
-
-Manager / Team Leader
-
-</option>
-
-
-<option>
-
-Entrepreneur
-
-</option>
-
-
-</select>
-
-
-
-
-
-
-
-
-<textarea
-
-rows={5}
-
-placeholder="Tell us why you want to join"
-
-className="
-w-full
-border
-rounded-xl
-px-5
-py-4
-"
-
-/>
-
-
-
-
-
-
-
-<button
-
-className="
-w-full
-bg-yellow-600
+bg-blue-950
 text-white
-py-4
-rounded-xl
+rounded-3xl
+p-10
+"
+
+>
+
+
+<h3 className="
+text-3xl
 font-bold
-hover:bg-yellow-700
-transition
+text-yellow-400
+">
+
+{track.title}
+
+</h3>
+
+
+<p className="
+mt-5
+text-gray-300
+">
+
+{track.text}
+
+</p>
+
+
+
+<ul className="
+mt-6
+space-y-3
 ">
 
 
-Submit Application
+{
+
+track.points.map(point=>(
+
+<li key={point}>
+
+✓ {point}
+
+</li>
+
+))
+
+}
 
 
-</button>
-
-
-
-
-
-</form>
+</ul>
 
 
 
 </div>
 
 
+))
 
-</motion.div>
 
+}
+
+
+</div>
 
 
 </section>
-
-
-
-
 
 
 
@@ -633,12 +564,16 @@ Submit Application
 
 
 <section className="
-max-w-7xl
-mx-auto
-px-6
+bg-gray-100
 py-20
 ">
 
+
+<div className="
+max-w-7xl
+mx-auto
+px-6
+">
 
 
 <h2 className="
@@ -648,98 +583,72 @@ text-center
 text-blue-950
 ">
 
-
-How It Works
-
+Our 4 Phase Model
 
 </h2>
 
 
 
-
-
 <div className="
 grid
-md:grid-cols-3
+md:grid-cols-4
 gap-8
 mt-12
 ">
 
 
-
 {
 
-
-steps.map(step=>(
-
+phases.map((phase,index)=>(
 
 
-<motion.div
-
-
-key={step.number}
-
-
-whileHover={{
-scale:1.05
-}}
-
-
+<div
 
 className="
-bg-blue-950
-text-white
+bg-white
 rounded-3xl
 p-8
-text-center
-">
+shadow
+"
+
+>
 
 
-<h3 className="
-text-5xl
+<div className="
+text-4xl
 font-bold
 text-yellow-500
 ">
 
+0{index+1}
 
-{step.number}
+</div>
 
+
+<h3 className="
+text-xl
+font-bold
+mt-4
+text-blue-950
+">
+
+{phase.title}
 
 </h3>
 
 
-
-
-<h4 className="
-text-2xl
-font-bold
-mt-4
-">
-
-
-{step.title}
-
-
-</h4>
-
-
-
-
 <p className="
 mt-4
-text-gray-300
+text-gray-600
 ">
 
-
-{step.text}
-
+{phase.text}
 
 </p>
 
 
 
-</motion.div>
-
+</div>
 
 
 ))
@@ -748,9 +657,10 @@ text-gray-300
 }
 
 
-
 </div>
 
+
+</div>
 
 
 </section>
@@ -763,60 +673,134 @@ text-gray-300
 
 
 
+{/* WHO */}
 
 
 
-
-{/* WHATSAPP */}
-
-
-
-<motion.a
-
-
-href="https://wa.me/2547045148380"
-
-
-target="_blank"
-
-
-animate={{
-y:[0,-10,0]
-}}
-
-
-transition={{
-repeat:Infinity,
-duration:2
-}}
-
-
-className="
-fixed
-bottom-6
-right-6
-bg-green-600
-text-white
-w-16
-h-16
-rounded-full
-flex
-items-center
-justify-center
-text-3xl
-shadow-xl
-z-50
+<section className="
+py-20
+text-center
 ">
 
 
-💬
+<h2 className="
+text-4xl
+font-bold
+text-blue-950
+">
+
+Who Is This For?
+
+</h2>
 
 
-</motion.a>
+
+<div className="
+flex
+flex-wrap
+justify-center
+gap-5
+mt-10
+">
+
+
+{
+
+people.map(person=>(
+
+
+<span
+
+className="
+bg-blue-950
+text-white
+px-6
+py-3
+rounded-full
+"
+
+>
+
+
+{person}
+
+
+</span>
+
+
+))
+
+
+}
+
+
+
+</div>
+
+
+</section>
 
 
 
 
+
+
+
+
+
+{/* SCRIPTURE */}
+
+
+
+<section className="
+bg-blue-950
+text-white
+py-20
+text-center
+">
+
+
+<div className="
+max-w-4xl
+mx-auto
+px-6
+">
+
+
+<h2 className="
+text-4xl
+font-bold
+text-yellow-400
+">
+
+Our Foundation
+
+</h2>
+
+
+<p className="
+mt-8
+italic
+text-lg
+text-gray-300
+">
+
+
+"Equipping the saints for the work of ministry,
+for the edifying of the body of Christ."
+
+<br/>
+
+Ephesians 4:11-13
+
+
+</p>
+
+
+</div>
+
+
+</section>
 
 
 
@@ -830,22 +814,19 @@ z-50
 
 
 <section className="
-bg-blue-950
-text-white
 py-20
 text-center
+bg-white
 ">
-
 
 
 <h2 className="
 text-4xl
 font-bold
+text-blue-950
 ">
 
-
-Ready To Equip Yourself?
-
+Ready To Multiply Leaders?
 
 </h2>
 
@@ -853,19 +834,38 @@ Ready To Equip Yourself?
 
 <p className="
 mt-5
-text-gray-300
+text-gray-600
 ">
 
-
-EMPOWER | EQUIP | TRANSFORM
-
+Empower leaders. Equip people. Transform communities.
 
 </p>
 
 
+
+<Link
+
+to="/contact"
+
+className="
+inline-block
+mt-8
+bg-yellow-500
+px-10
+py-4
+rounded-xl
+font-bold
+text-blue-950
+"
+
+>
+
+Join Our Next Cohort
+
+</Link>
+
+
 </section>
-
-
 
 
 
@@ -877,7 +877,6 @@ EMPOWER | EQUIP | TRANSFORM
 
 
 </div>
-
 
 
 )

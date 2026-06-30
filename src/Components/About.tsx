@@ -7,21 +7,21 @@ import { motion } from "framer-motion";
 export default function About(){
 
 
-const differences = [
+const differences=[
 
 {
 title:"Biblically Rooted",
-text:"Training flows from Scripture and Ephesians 4 as our blueprint for leadership."
+text:"All training flows from Scripture, not corporate trends. Ephesians 4 is our blueprint for leadership and ministry."
 },
 
 {
 title:"Spirit Empowered",
-text:"We provide tools, but God empowers believers through His Spirit."
+text:"We provide tools, but God is the one who empowers believers through His Spirit."
 },
 
 {
 title:"Gospel Centered",
-text:"The gospel shapes leadership, ministry and everyday life."
+text:"The gospel is taught, protected and applied to every area of life."
 },
 
 {
@@ -30,34 +30,34 @@ text:"We train leaders who equip and develop other leaders."
 },
 
 {
-title:"Contextual",
-text:"Built for Kenya and East Africa with practical solutions."
+title:"Transformation Focused",
+text:"Our goal is Christ-like maturity in the church and workplace."
 },
 
 {
-title:"Transformation Focused",
-text:"Our goal is Christ-like maturity in church and workplace."
+title:"Contextual",
+text:"Built for Kenya and East Africa with practical, affordable and relevant solutions."
 }
-
 
 ];
 
 
 
 
-const fadeUp = {
+const fadeUp={
 
 hidden:{
 opacity:0,
-y:50
+y:40
 },
 
 show:{
 opacity:1,
 y:0,
 transition:{
-duration:0.7
+duration:.7
 }
+
 }
 
 };
@@ -79,31 +79,48 @@ return(
 {/* HERO */}
 
 
-<section
 
-className="
-relative
-pt-32
-bg-cover
-bg-center
+<section className="
+
+bg-linear-to-br
+
+from-blue-950
+
+via-blue-900
+
+to-blue-800
+
 text-white
-"
 
-style={{
+py-32
 
-backgroundImage:"url('/Pst3.jpeg')"
+relative
 
-}}
+overflow-hidden
 
->
+">
+
 
 
 <div className="
-absolute
-inset-0
-bg-blue-950/85
-">
 
+absolute
+
+right-0
+
+top-0
+
+w-96
+
+h-96
+
+bg-yellow-500/20
+
+rounded-full
+
+blur-3xl
+
+">
 
 </div>
 
@@ -113,122 +130,108 @@ bg-blue-950/85
 <motion.div
 
 variants={fadeUp}
+
 initial="hidden"
-whileInView="show"
-viewport={{once:true}}
+
+animate="show"
 
 className="
-relative
-max-w-7xl
-mx-auto
-px-6
-py-32
-text-center
-"
 
+max-w-6xl
+
+mx-auto
+
+px-6
+
+text-center
+
+relative
+
+"
 
 >
 
 
-<h1 className="
-text-5xl
-md:text-7xl
-font-bold
-tracking-tight
-">
-
-EMPOWER
-<br/>
-
-EQUIP
-<br/>
-
-TRANSFORM
-
-</h1>
-
-
-
-
 <p className="
-mt-6
-max-w-3xl
-mx-auto
-text-xl
-text-gray-200
+
+text-yellow-400
+
+font-bold
+
+tracking-[8px]
+
 ">
 
-Preparing God's People for God's Work through
-biblical leadership, discipleship and transformation.
+EPHESIANS 4:11-13
 
 </p>
 
 
 
 
+<h1 className="
 
-<div className="
-mt-10
-flex
-justify-center
-gap-5
-flex-wrap
+mt-8
+
+text-5xl
+
+md:text-7xl
+
+font-black
+
 ">
 
 
-<Link
+EMPOWER
 
-to="/joincohort"
-
-className="
-bg-yellow-600
-px-10
-py-4
-rounded-full
-font-semibold
-hover:scale-105
-transition
-"
-
->
-
-Join Cohort
-
-</Link>
+<br/>
 
 
+<span className="text-yellow-400">
 
-<Link
+EQUIP
 
-to="/contact"
+</span>
 
-className="
-border
-border-white
-px-10
-py-4
-rounded-full
-hover:bg-white
-hover:text-blue-950
-transition
-"
 
->
+<br/>
 
-Contact Us
+TRANSFORM
 
-</Link>
+
+</h1>
 
 
 
-</div>
+<p className="
+
+mt-8
+
+text-xl
+
+text-gray-200
+
+max-w-3xl
+
+mx-auto
+
+">
+
+
+Preparing God’s People for God’s Work through biblical
+leadership, discipleship and transformation.
+
+
+</p>
 
 
 
 </motion.div>
 
 
+
 </section>
+
 
 
 
@@ -242,77 +245,162 @@ Contact Us
 
 
 <section className="
+
 max-w-7xl
+
 mx-auto
+
 px-6
-py-20
+
+py-24
+
 ">
 
 
 <div className="
+
 grid
+
 md:grid-cols-2
-gap-12
+
+gap-14
+
 items-center
+
 ">
+
+
+
 
 
 <motion.div
 
 variants={fadeUp}
+
 initial="hidden"
+
 whileInView="show"
+
 viewport={{once:true}}
 
 >
 
 
-<h2 className="
-text-4xl
+<p className="
+
+text-yellow-600
+
 font-bold
-text-blue-950
+
+tracking-widest
+
+uppercase
+
 ">
 
-Who We Are
+About Us
+
+</p>
+
+
+
+<h2 className="
+
+mt-4
+
+text-4xl
+
+md:text-5xl
+
+font-bold
+
+text-blue-950
+
+">
+
+Preparing God's People
+
+For God's Work
 
 </h2>
 
 
 
+
 <p className="
+
 mt-6
+
 text-gray-600
+
 leading-relaxed
+
 ">
+
 
 Empower Equip Transform exists to prepare God's people
 for God's work.
 
-We believe every believer is called into ministry and every leader
-is called to equip others.
+We believe every believer is called into ministry and every
+leader is called to equip others.
 
-Our mission is building gospel-centered leaders who transform
-churches, workplaces and communities.
 
 </p>
 
 
 
 
+<p className="
+
+mt-5
+
+text-gray-600
+
+leading-relaxed
+
+">
+
+
+We exist to close the gap between Sunday faith and Monday
+leadership by developing gospel-centered leaders who
+transform churches, workplaces and communities.
+
+
+</p>
+
+
+
+
+
+
+
 <div className="
+
 mt-8
+
 bg-white
+
 rounded-3xl
+
 shadow-xl
+
 p-8
-border
+
+border-l-4
+
+border-yellow-500
+
 ">
 
 
 <h3 className="
+
 text-2xl
+
 font-bold
-text-yellow-600
+
+text-blue-950
+
 ">
 
 Our Conviction
@@ -322,15 +410,20 @@ Our Conviction
 
 
 <p className="
+
 mt-4
+
 text-gray-600
+
 ">
+
 
 Every believer is called to ministry.
 
-When leaders are grounded in Scripture and skilled in people
-development, churches grow healthier and organizations lead
-with integrity.
+When leaders are grounded in Scripture and skilled in
+people development, churches grow healthier and
+organizations lead with integrity.
+
 
 </p>
 
@@ -338,7 +431,11 @@ with integrity.
 </div>
 
 
+
+
 </motion.div>
+
+
 
 
 
@@ -349,71 +446,129 @@ with integrity.
 <motion.div
 
 initial={{
+
 opacity:0,
-scale:0.8
+
+x:50
+
 }}
 
 whileInView={{
+
 opacity:1,
-scale:1
+
+x:0
+
 }}
 
 transition={{
-duration:0.8
+
+duration:.8
+
 }}
 
 viewport={{once:true}}
 
-className="
-rounded-3xl
-overflow-hidden
-shadow-2xl
-"
 
+
+className="relative"
 
 >
 
 
+<div className="
+
+absolute
+
+inset-0
+
+bg-yellow-500
+
+rounded-3xl
+
+rotate-6
+
+">
+
+</div>
+
+
+
 <img
 
-src="/Pst1.jpeg"
+src="/pst2.jpeg"
 
 alt="Leadership"
 
 className="
-w-full
+
+relative
+
+rounded-3xl
+
+shadow-2xl
+
 h-130
+
+w-full
+
 object-cover
+
 "
 
 />
 
 
+
+
+
 <div className="
-bg-white
-p-8
-text-center
+
+absolute
+
+bottom-8
+
+left-8
+
+right-8
+
+bg-white/90
+
+backdrop-blur
+
+rounded-2xl
+
+p-6
+
 ">
 
 
 <h3 className="
-text-3xl
+
+text-2xl
+
 font-bold
+
 text-blue-950
+
 ">
 
-Leadership
+Empower | Equip | Transform
 
 </h3>
 
 
 <p className="
+
 text-yellow-600
+
 font-semibold
-mt-3
+
+mt-2
+
 ">
 
-Equipping God's People For God's Work
+Preparing Leaders For Kingdom Impact
 
 </p>
 
@@ -421,7 +576,10 @@ Equipping God's People For God's Work
 </div>
 
 
+
 </motion.div>
+
+
 
 
 
@@ -429,6 +587,7 @@ Equipping God's People For God's Work
 
 
 </section>
+
 
 
 
@@ -440,122 +599,141 @@ Equipping God's People For God's Work
 {/* VISION MISSION */}
 
 
+
 <section className="
+
 bg-white
+
 py-20
+
 ">
 
 
 <div className="
+
 max-w-7xl
+
 mx-auto
+
 px-6
+
 grid
-md:grid-cols-2
-gap-10
+
+md:grid-cols-3
+
+gap-8
+
 ">
 
 
 
-<motion.div
+<div className="
 
-whileInView={{
-opacity:1,
-x:0
-}}
-
-initial={{
-opacity:0,
-x:-50
-}}
-
-viewport={{once:true}}
-
-className="
 bg-blue-950
+
 text-white
+
 rounded-3xl
+
 p-10
-"
 
-
->
-
-
-<h2 className="
-text-3xl
-font-bold
 ">
+
+
+<h2 className="text-3xl font-bold">
 
 Vision
 
 </h2>
 
 
-<p className="
-mt-5
-text-gray-300
-">
+<p className="mt-5 text-gray-300">
+
+
+To prepare God’s people for God’s work.
 
 To see gospel-centered churches and leaders equipped
-with knowledge and tools that help them become effective,
+with knowledge and tools that make them effective,
 efficient and transformational.
+
 
 </p>
 
 
-</motion.div>
+</div>
 
 
 
 
 
 
-<motion.div
+<div className="
 
-whileInView={{
-opacity:1,
-x:0
-}}
+bg-yellow-500
 
-initial={{
-opacity:0,
-x:50
-}}
-
-viewport={{once:true}}
-
-className="
-bg-yellow-600
-text-white
 rounded-3xl
+
 p-10
-"
 
->
+text-blue-950
 
-
-<h2 className="
-text-3xl
-font-bold
 ">
+
+
+<h2 className="text-3xl font-bold">
 
 Mission
 
 </h2>
 
 
-<p className="
-mt-5
-">
+<p className="mt-5">
+
 
 To train men and women empowered by God to equip
 and disciple God's people.
 
+
 </p>
 
 
-</motion.div>
+</div>
+
+
+
+
+
+
+
+<div className="
+
+bg-gray-100
+
+rounded-3xl
+
+p-10
+
+">
+
+
+<h2 className="text-3xl font-bold text-blue-950">
+
+Purpose
+
+</h2>
+
+
+<p className="mt-5 text-gray-600">
+
+
+To equip leaders for ministry, workplaces and communities
+so that God's people mature and multiply.
+
+
+</p>
+
+
+</div>
 
 
 
@@ -563,6 +741,7 @@ and disciple God's people.
 
 
 </section>
+
 
 
 
@@ -574,56 +753,48 @@ and disciple God's people.
 {/* SCRIPTURE */}
 
 
+
 <section className="
+
+bg-blue-950
+
+text-white
+
 py-20
-bg-gray-100
+
 ">
 
 
-<motion.div
+<div className="
 
-variants={fadeUp}
-initial="hidden"
-whileInView="show"
-viewport={{once:true}}
-
-className="
 max-w-5xl
+
 mx-auto
+
 px-6
+
 text-center
-"
 
-
->
+">
 
 
 <h2 className="
+
 text-4xl
+
 font-bold
-text-blue-950
+
+text-yellow-400
+
 ">
 
-Our Anchor Scripture
+OUR ANCHOR SCRIPTURE
 
 </h2>
 
 
 
-<div className="
-mt-10
-bg-white
-shadow-xl
-rounded-3xl
-p-10
-">
-
-
-<h3 className="
-text-2xl
-font-bold
-text-yellow-600
-">
+<h3 className="mt-6 text-2xl font-bold">
 
 Ephesians 4:11-13
 
@@ -632,25 +803,28 @@ Ephesians 4:11-13
 
 
 <p className="
-mt-5
+
+mt-6
+
 italic
-text-gray-600
+
+text-gray-200
+
 leading-relaxed
+
 ">
 
-"And He Himself gave some to be apostles,
-some prophets, some evangelists, and some pastors
-and teachers, for the equipping of the saints
-for the work of ministry."
+
+“And He Himself gave some to be apostles, some prophets,
+some evangelists, and some pastors and teachers, for the
+equipping of the saints for the work of ministry, for the
+edifying of the body of Christ...”
+
 
 </p>
 
 
-
 </div>
-
-
-</motion.div>
 
 
 </section>
@@ -662,23 +836,41 @@ for the work of ministry."
 
 
 
-{/* WHAT MAKES US DIFFERENT */}
+
+{/* DIFFERENT */}
 
 
 
 <section className="
+
 py-20
+
+bg-gray-100
+
+">
+
+
+<div className="
+
 max-w-7xl
+
 mx-auto
+
 px-6
+
 ">
 
 
 <h2 className="
+
 text-4xl
+
 font-bold
+
 text-center
+
 text-blue-950
+
 ">
 
 What Makes Us Different
@@ -687,56 +879,54 @@ What Makes Us Different
 
 
 
+
 <div className="
+
 grid
+
 md:grid-cols-3
+
 gap-8
+
 mt-12
+
 ">
 
 
 {
 
-differences.map((item,index)=>(
+differences.map(item=>(
 
 
 <motion.div
 
-key={item.title}
-
-initial={{
-opacity:0,
-y:40
-}}
-
-whileInView={{
-opacity:1,
-y:0
-}}
-
-transition={{
-delay:index*0.1
-}}
-
-viewport={{once:true}}
+whileHover={{scale:1.03}}
 
 className="
+
 bg-white
+
 rounded-3xl
+
+shadow
+
 p-8
-shadow-lg
-hover:-translate-y-2
-transition
+
 "
 
+key={item.title}
 
 >
 
 
 <h3 className="
+
 text-xl
+
 font-bold
+
 text-blue-900
+
 ">
 
 {item.title}
@@ -746,14 +936,16 @@ text-blue-900
 
 
 <p className="
+
 mt-4
+
 text-gray-600
+
 ">
 
 {item.text}
 
 </p>
-
 
 
 </motion.div>
@@ -765,6 +957,10 @@ text-gray-600
 }
 
 
+
+</div>
+
+
 </div>
 
 
@@ -777,20 +973,108 @@ text-gray-600
 
 
 
-{/* CTA */}
+
+{/* STATEMENT */}
+
 
 
 <section className="
-bg-blue-950
-text-white
+
 py-20
+
+bg-white
+
+">
+
+
+<div className="
+
+max-w-5xl
+
+mx-auto
+
+px-6
+
 text-center
+
 ">
 
 
 <h2 className="
+
 text-4xl
+
 font-bold
+
+text-blue-950
+
+">
+
+Statement of Faith
+
+</h2>
+
+
+
+<p className="
+
+mt-6
+
+text-gray-600
+
+leading-relaxed
+
+">
+
+
+We hold to the biblical Christian faith:
+
+Scripture as God's Word, salvation by grace through faith
+in Christ, and the Church as God's agent in the world.
+
+We affirm that the Holy Spirit regenerates, calls and
+empowers believers for ministry.
+
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+{/* CTA */}
+
+
+
+<section className="
+
+bg-blue-950
+
+text-white
+
+py-20
+
+text-center
+
+">
+
+
+<h2 className="
+
+text-4xl
+
+font-bold
+
 ">
 
 Ready To Multiply Leaders?
@@ -799,15 +1083,11 @@ Ready To Multiply Leaders?
 
 
 
-<p className="
-mt-5
-text-gray-300
-">
+<p className="mt-5 text-gray-300">
 
-Join us in equipping God's people for God's work.
+Empower leaders. Equip people. Transform communities.
 
 </p>
-
 
 
 
@@ -816,20 +1096,30 @@ Join us in equipping God's people for God's work.
 to="/joincohort"
 
 className="
+
 inline-block
+
 mt-8
-bg-yellow-600
+
+bg-yellow-500
+
+text-blue-950
+
 px-10
+
 py-4
+
 rounded-full
-font-semibold
-hover:bg-yellow-700
-transition
+
+font-bold
+
 "
 
 >
 
+
 Join Our Next Cohort
+
 
 </Link>
 
@@ -848,5 +1138,6 @@ Join Our Next Cohort
 
 
 )
+
 
 }

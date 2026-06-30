@@ -4,69 +4,10 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 
-
 export default function Home(){
 
 
-
-const values = [
-
-{
-title:"Biblically Rooted",
-text:"All training flows from Scripture. Ephesians 4 is our blueprint for leadership and ministry."
-},
-
-{
-title:"Spirit Empowered",
-text:"We provide tools, but God empowers believers through His Spirit."
-},
-
-{
-title:"Gospel Centered",
-text:"The gospel shapes leadership, ministry and everyday life."
-},
-
-{
-title:"Multiplication Focused",
-text:"We train leaders who equip other leaders."
-},
-
-{
-title:"Contextual",
-text:"Built for Kenya and East Africa with practical and relevant solutions."
-},
-
-{
-title:"Transformation Focused",
-text:"Our goal is Christ-like maturity in church and workplace."
-}
-
-];
-
-
-
-
-const tools=[
-
-"The Gospel",
-
-"Biblical Interpretation",
-
-"Leadership Training",
-
-"Public Speaking",
-
-"Counselling",
-
-"People Development"
-
-];
-
-
-
-
-
-const fadeUp = {
+const fade = {
 
 hidden:{
 opacity:0,
@@ -77,11 +18,89 @@ show:{
 opacity:1,
 y:0,
 transition:{
-duration:0.7
+duration:.7
 }
 }
 
 };
+
+
+
+const vision = [
+
+{
+title:"Vision",
+text:
+"To prepare God’s people for God’s work. To see gospel-centered churches and gospel-centered leaders equipped with the knowledge and tools that would help them to be effective, efficient, and transformational in the world."
+},
+
+{
+title:"Mission",
+text:
+"To train men and women empowered by God to equip and disciple God’s people."
+},
+
+{
+title:"Our Conviction",
+text:
+"Every believer is called to ministry. When leaders are grounded in Scripture and skilled in people development, churches grow healthier and organizations lead with integrity."
+}
+
+];
+
+
+
+
+
+const tools=[
+
+"The Gospel",
+
+"Biblical Understanding & Interpretation",
+
+"Leadership Training",
+
+"Public Speaking & Presentation"
+
+];
+
+
+
+
+
+const differences=[
+
+{
+title:"Biblically Rooted",
+text:"All training flows from Scripture, not corporate fads. Ephesians 4 is our blueprint."
+},
+
+{
+title:"Spirit Empowered",
+text:"We provide tools, but only God empowers. Regeneration, calling, and gifting are His work."
+},
+
+{
+title:"Gospel Centered",
+text:"The gospel is taught, protected, and applied to all of life."
+},
+
+{
+title:"Multiplication Focused",
+text:"We train trainers. Every leader leaves ready to equip others."
+},
+
+{
+title:"Sanctification as the Goal",
+text:"Effective and efficient are means. Transformation into Christlikeness is the end."
+},
+
+{
+title:"Contextual",
+text:"Built for Kenya and East Africa — practical, affordable, and relevant."
+}
+
+];
 
 
 
@@ -103,30 +122,45 @@ return(
 
 
 
-<section
+<section className="
 
-className="
 relative
-pt-32
-bg-cover
-bg-center
+
+overflow-hidden
+
+bg-linear-to-br
+
+from-blue-950
+
+via-blue-900
+
+to-blue-800
+
 text-white
-"
 
-style={{
+py-32
 
-backgroundImage:"url('/Pst3.jpeg')"
-
-}}
-
->
-
+">
 
 
 <div className="
+
 absolute
-inset-0
-bg-blue-950/85
+
+w-96
+
+h-96
+
+bg-yellow-500/20
+
+rounded-full
+
+blur-3xl
+
+top-0
+
+right-0
+
 ">
 
 
@@ -135,51 +169,81 @@ bg-blue-950/85
 
 
 
-
 <motion.div
 
-variants={fadeUp}
+variants={fade}
 
 initial="hidden"
 
 animate="show"
 
+
 className="
+
 relative
-max-w-7xl
+
+max-w-6xl
+
 mx-auto
+
 px-6
-py-28
-grid
-md:grid-cols-2
-gap-12
-items-center
+
+text-center
+
 "
+
 
 >
 
 
-<div>
+<p className="
+
+text-yellow-400
+
+tracking-[8px]
+
+font-bold
+
+">
+
+EPHESIANS 4:11-13
+
+</p>
 
 
 
 <h1 className="
+
+mt-8
+
 text-5xl
-md:text-7xl
-font-bold
+
+md:text-8xl
+
+font-black
+
+uppercase
+
 leading-tight
+
 ">
 
 
-Empower
+EMPOWER
+
+<span className="text-yellow-400">
+
+&nbsp;|&nbsp;
+
+</span>
+
+EQUIP
+
 
 <br/>
 
-Equip
 
-<br/>
-
-Transform
+TRANSFORM
 
 
 </h1>
@@ -187,17 +251,45 @@ Transform
 
 
 
+<h2 className="
 
-<p className="
-mt-6
-text-xl
-text-gray-200
-leading-relaxed
+mt-8
+
+text-2xl
+
+md:text-3xl
+
+font-bold
+
 ">
 
 
-Preparing God's People for God's Work through biblical
-leadership training, discipleship and transformation.
+Preparing God’s People for God’s Work
+
+
+</h2>
+
+
+
+
+<p className="
+
+mt-6
+
+max-w-3xl
+
+mx-auto
+
+text-gray-200
+
+text-lg
+
+">
+
+
+Training gospel-centered leaders who transform churches,
+organizations, and communities through biblical leadership
+and discipleship.
 
 
 </p>
@@ -205,20 +297,20 @@ leadership training, discipleship and transformation.
 
 
 
+
 <div className="
-mt-8
+
+mt-10
+
 flex
+
+justify-center
+
 gap-5
+
 flex-wrap
+
 ">
-
-
-
-<motion.div
-
-whileHover={{scale:1.05}}
-
->
 
 
 <Link
@@ -226,216 +318,67 @@ whileHover={{scale:1.05}}
 to="/joincohort"
 
 className="
-bg-yellow-600
+
+bg-yellow-500
+
+text-blue-950
+
 px-10
+
 py-4
-rounded-full
-font-semibold
-inline-block
-hover:bg-yellow-700
-transition
+
+rounded-lg
+
+font-bold
+
 "
+
 
 >
 
-Join Cohort
+Join Our Cohort
 
 </Link>
 
-
-</motion.div>
-
-
-
-
-
-<motion.div
-
-whileHover={{scale:1.05}}
-
->
 
 
 <Link
 
-to="/about"
+to="/contact"
 
 className="
+
 border
+
 border-white
+
 px-10
+
 py-4
-rounded-full
-inline-block
-hover:bg-white
-hover:text-blue-950
-transition
+
+rounded-lg
+
+font-bold
+
 "
+
 
 >
 
-Discover More
+Contact Us
 
 </Link>
 
 
-</motion.div>
-
-
 
 </div>
 
 
 
-</div>
-
-
-
-
-
-
-
-
-
-<motion.div
-
-animate={{
-
-y:[0,-10,0]
-
-}}
-
-transition={{
-
-duration:3,
-
-repeat:Infinity
-
-}}
-
-className="
-bg-white/10
-backdrop-blur
-rounded-3xl
-p-10
-border
-border-white/20
-"
-
->
-
-
-<h2 className="
-text-3xl
-font-bold
-">
-
-
-Ephesians 4:11-13
-
-
-</h2>
-
-
-
-
-<p className="
-mt-5
-italic
-text-gray-200
-leading-relaxed
-">
-
-
-"Equipping the saints for the work of ministry,
-for the edifying of the body of Christ."
-
-
-</p>
-
-
-
 </motion.div>
-
-
-
-
-
-</motion.div>
-
 
 
 </section>
-
-
-
-
-
-
-
-
-
-{/* INTRO */}
-
-
-
-<motion.section
-
-variants={fadeUp}
-
-initial="hidden"
-
-whileInView="show"
-
-viewport={{once:true}}
-
-className="
-max-w-7xl
-mx-auto
-px-6
-py-20
-text-center
-"
-
->
-
-
-<h2 className="
-text-4xl
-font-bold
-text-blue-950
-">
-
-
-Preparing Leaders For Kingdom Impact
-
-
-</h2>
-
-
-
-
-<p className="
-mt-6
-max-w-4xl
-mx-auto
-text-lg
-text-gray-600
-">
-
-
-We exist to close the gap between Sunday faith and Monday leadership.
-We equip pastors, ministry leaders and marketplace leaders with
-biblical knowledge and practical tools for transformation.
-
-
-</p>
-
-
-
-</motion.section>
-
-
 
 
 
@@ -448,95 +391,88 @@ biblical knowledge and practical tools for transformation.
 
 
 <section className="
+
 max-w-7xl
+
 mx-auto
+
 px-6
-pb-20
+
+py-20
+
 ">
 
 
 <div className="
+
 grid
+
 md:grid-cols-3
+
 gap-8
+
 ">
 
 
 {
 
-
-[
-
-{
-title:"Vision",
-text:"To see gospel-centered churches and leaders equipped with knowledge and tools that make them effective and transformational."
-},
-
-{
-title:"Mission",
-text:"To train men and women empowered by God to equip and disciple God's people."
-},
-
-{
-title:"Conviction",
-text:"Every believer is called to ministry. Healthy leaders create healthy churches and organizations."
-}
-
-
-].map((item,index)=>(
+vision.map(item=>(
 
 
 <motion.div
 
-key={item.title}
-
-variants={fadeUp}
-
-initial="hidden"
+variants={fade}
 
 whileInView="show"
 
+initial="hidden"
+
 viewport={{once:true}}
 
-transition={{delay:index *0.2}}
-
-whileHover={{scale:1.03}}
-
 className="
+
 bg-white
+
 rounded-3xl
+
 shadow-lg
+
 p-8
+
 "
+
 
 >
 
 
 <h3 className="
+
 text-2xl
+
 font-bold
+
 text-blue-950
+
 ">
 
-
 {item.title}
-
 
 </h3>
 
 
-
 <p className="
-mt-5
-text-gray-600
-">
 
+mt-5
+
+text-gray-600
+
+leading-relaxed
+
+">
 
 {item.text}
 
-
 </p>
-
 
 
 </motion.div>
@@ -546,7 +482,6 @@ text-gray-600
 
 
 }
-
 
 
 </div>
@@ -566,188 +501,384 @@ text-gray-600
 
 
 
-<motion.section
+<section className="
 
-initial={{opacity:0}}
-
-whileInView={{opacity:1}}
-
-viewport={{once:true}}
-
-className="
 bg-blue-950
+
 text-white
+
 py-20
-"
 
-
->
+">
 
 
 <div className="
+
 max-w-5xl
+
 mx-auto
+
 px-6
+
 text-center
+
 ">
 
 
 <h2 className="
-text-4xl
+
+text-3xl
+
 font-bold
+
+text-yellow-400
+
 ">
 
-
-Our Anchor Scripture
-
+OUR ANCHOR SCRIPTURE
 
 </h2>
 
 
 
-
-<div className="
-mt-10
-bg-white/10
-rounded-3xl
-p-10
-">
-
-
 <p className="
-italic
+
+mt-8
+
 text-xl
+
+italic
+
+leading-relaxed
+
 ">
 
 
-"And He Himself gave some to be apostles,
-some prophets, some evangelists, and some pastors
-and teachers..."
+“And He Himself gave some to be apostles, some prophets,
+some evangelists, and some pastors and teachers,
+for the equipping of the saints for the work of ministry,
+for the edifying of the body of Christ...”
 
 
 </p>
 
 
-</div>
-
-
-</div>
-
-
-</motion.section>
-
-
-
-
-
-
-
-
-
-{/* TOOLS */}
-
-
-
-<section className="
-py-20
-max-w-7xl
-mx-auto
-px-6
-">
-
-
-<h2 className="
-text-4xl
-font-bold
-text-center
-text-blue-950
-">
-
-
-What We Equip Leaders With
-
-
-</h2>
-
-
-
-
 
 <div className="
-grid
-md:grid-cols-3
-gap-8
-mt-12
-">
 
+mt-10
 
-{
+bg-white/10
 
-tools.map((tool,index)=>(
-
-
-
-<motion.div
-
-key={tool}
-
-initial={{opacity:0,y:30}}
-
-whileInView={{opacity:1,y:0}}
-
-viewport={{once:true}}
-
-transition={{
-delay:index*0.1
-}}
-
-whileHover={{
-scale:1.05
-}}
-
-className="
-bg-white
 rounded-2xl
-shadow
+
 p-8
-"
 
-
->
+">
 
 
 <h3 className="
-text-xl
+
+text-2xl
+
 font-bold
-text-yellow-600
+
 ">
 
-
-{tool}
-
+What This Text Means
 
 </h3>
 
 
 <p className="
-mt-3
-text-gray-600
+
+mt-4
+
+text-gray-200
+
 ">
 
-
-Practical biblical tools for effective leadership.
-
+Christ gives gifts to the church for the equipping and
+edification of believers. Our role is to help leaders
+effectively transform churches into gospel-centered,
+disciple-making communities.
 
 </p>
 
 
-</motion.div>
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+{/* WHAT WE DO */}
+
+
+
+<section className="
+
+max-w-7xl
+
+mx-auto
+
+px-6
+
+py-20
+
+">
+
+
+<h2 className="
+
+text-4xl
+
+font-bold
+
+text-center
+
+text-blue-950
+
+">
+
+WHAT WE DO
+
+</h2>
+
+
+
+
+<div className="
+
+grid
+
+md:grid-cols-4
+
+gap-6
+
+mt-12
+
+">
+
+
+{
+
+tools.map(tool=>(
+
+
+<div className="
+
+bg-white
+
+shadow
+
+rounded-2xl
+
+p-6
+
+text-center
+
+">
+
+
+<h3 className="
+
+font-bold
+
+text-yellow-600
+
+">
+
+{tool}
+
+</h3>
+
+
+<p className="
+
+mt-3
+
+text-gray-600
+
+">
+
+Practical biblical tools for ministry and leadership.
+
+</p>
+
+
+</div>
 
 
 ))
 
 
 }
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+{/* TRAINING TRACKS */}
+
+
+
+<section className="
+
+bg-gray-100
+
+py-20
+
+">
+
+
+<div className="
+
+max-w-7xl
+
+mx-auto
+
+px-6
+
+">
+
+
+<h2 className="
+
+text-4xl
+
+font-bold
+
+text-center
+
+text-blue-950
+
+">
+
+TRAINING TRACKS
+
+</h2>
+
+
+
+<div className="
+
+grid
+
+md:grid-cols-2
+
+gap-10
+
+mt-12
+
+">
+
+
+
+<div className="
+
+bg-white
+
+p-10
+
+rounded-3xl
+
+shadow
+
+">
+
+
+<h3 className="
+
+text-2xl
+
+font-bold
+
+text-blue-950
+
+">
+
+Church Leadership Institute
+
+</h3>
+
+
+<p className="mt-5 text-gray-600">
+
+Training pastors and ministry leaders through biblical foundations,
+shepherding skills, disciple-making and leadership development.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div className="
+
+bg-white
+
+p-10
+
+rounded-3xl
+
+shadow
+
+">
+
+
+<h3 className="
+
+text-2xl
+
+font-bold
+
+text-blue-950
+
+">
+
+Marketplace Leadership Academy
+
+</h3>
+
+
+<p className="mt-5 text-gray-600">
+
+Helping CEOs, managers, entrepreneurs and leaders lead with
+biblical wisdom, excellence and integrity.
+
+</p>
+
+
+</div>
+
+
+
+</div>
 
 
 </div>
@@ -768,102 +899,97 @@ Practical biblical tools for effective leadership.
 
 
 <section className="
-bg-gray-100
+
+bg-blue-950
+
+text-white
+
 py-20
+
 ">
 
 
-<div className="
-max-w-7xl
-mx-auto
-px-6
-">
+<div className="max-w-7xl mx-auto px-6">
 
 
 <h2 className="
+
 text-4xl
+
 font-bold
+
 text-center
-text-blue-950
+
 ">
 
-
-What Makes Us Different
-
+WHAT MAKES US DIFFERENT
 
 </h2>
 
 
 
+
 <div className="
+
 grid
+
 md:grid-cols-3
+
 gap-8
+
 mt-12
+
 ">
 
 
 {
 
-values.map((value,index)=>(
+differences.map(item=>(
 
 
-<motion.div
+<div className="
 
-key={value.title}
+border
 
-initial={{opacity:0,scale:.9}}
+border-white/20
 
-whileInView={{opacity:1,scale:1}}
+rounded-2xl
 
-viewport={{once:true}}
+p-6
 
-transition={{
-delay:index*0.1
-}}
-
-className="
-bg-white
-rounded-3xl
-shadow
-p-8
-"
-
->
-
-
-<h3 className="
-text-xl
-font-bold
-text-blue-900
 ">
 
 
-{value.title}
+<h3 className="
 
+text-yellow-400
+
+font-bold
+
+text-xl
+
+">
+
+{item.title}
 
 </h3>
 
 
-<p className="
-mt-4
-text-gray-600
-">
+<p className="mt-4 text-gray-300">
 
-
-{value.text}
-
+{item.text}
 
 </p>
 
 
-</motion.div>
+</div>
 
 
 ))
 
 
 }
+
 
 
 </div>
@@ -873,7 +999,6 @@ text-gray-600
 
 
 </section>
-
 
 
 
@@ -887,48 +1012,40 @@ text-gray-600
 
 
 <section className="
-bg-blue-950
-text-white
+
 py-20
+
 text-center
+
+bg-linear-to-r
+
+from-blue-950
+
+to-blue-800
+
+text-white
+
 ">
-
-
-<motion.div
-
-initial={{opacity:0,y:40}}
-
-whileInView={{opacity:1,y:0}}
-
-viewport={{once:true}}
-
->
 
 
 <h2 className="
+
 text-4xl
+
 font-bold
+
 ">
 
-
-Ready To Multiply Leaders?
-
+READY TO MULTIPLY LEADERS?
 
 </h2>
 
 
-
-<p className="
-mt-5
-text-gray-300
-">
-
+<p className="mt-5 text-gray-300">
 
 Empower leaders. Equip people. Transform communities.
 
-
 </p>
-
 
 
 
@@ -937,34 +1054,34 @@ Empower leaders. Equip people. Transform communities.
 to="/contact"
 
 className="
+
 inline-block
+
 mt-8
-bg-yellow-600
+
+bg-yellow-500
+
+text-blue-950
+
 px-10
+
 py-4
-rounded-full
-font-semibold
-hover:bg-yellow-700
-transition
+
+rounded-lg
+
+font-bold
+
 "
 
 >
 
-
 Contact Us
-
 
 </Link>
 
 
 
-</motion.div>
-
-
-
 </section>
-
-
 
 
 
@@ -976,6 +1093,5 @@ Contact Us
 
 
 )
-
 
 }
